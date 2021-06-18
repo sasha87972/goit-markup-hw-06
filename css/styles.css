@@ -775,6 +775,8 @@ a.transp {
   left: 0;
   top: 50%;
   transform: translateY(-50%);
+  width: 16px;
+  height: 15px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -782,17 +784,19 @@ a.transp {
   height: 15px;
   border: 2px solid var(--black-text);
   border-radius: 2px;
-  transition: outline 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-checkbox:checked + .custom-checkbox {
-  border-color: var(--blue-clr);
+  border-color: transparent;
   background-color: var(--blue-clr);
+  background-image: url('../images/icons/icon-check.svg');
+  background-size: contain;
+  background-origin: border-box;
 }
 .modal-checkbox:focus + .custom-checkbox {
-  outline: 4px solid var(--black-text);
+  border-color: var(--blue-clr);
 }
 
 .modal-submit {
